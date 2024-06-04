@@ -5,7 +5,7 @@ const getRoommates = async (req, res) => {
         const roommates = await modelRoommate.findAllRoommates()
         return res.json({ roommates })
     } catch (error) {
-        console.log(error.message);
+        console.error("Error al procesar los archivos:", error)
     }
 }
 
@@ -14,7 +14,7 @@ const addRoommate = async (req, res) => {
         const roommate = await modelRoommate.createRoommate()
         return res.json(roommate)
     } catch (error) {
-        console.log(error.message)
+        console.error("Error al procesar los archivos:", error)
     }
 }
 
