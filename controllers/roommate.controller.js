@@ -11,8 +11,8 @@ const getRoommates = async (req, res) => {
 
 const addRoommate = async (req, res) => {
     try {
-        const result = await modelRoommate.createRoommate()
-        return res.json(result)
+        const roommate = await modelRoommate.createRoommate()
+        return res.json(roommate)
     } catch (error) {
         console.log(error.message)
     }
